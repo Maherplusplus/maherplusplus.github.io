@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div  class="section1">
+    <div class="section1">
       <div id="particles-js" class="particles"></div>
       <h1 onclick="name_clicked()" class="main-title">
         <span>Maher</span>Safadi<span>.</span>
       </h1>
-       
+
       <button onclick="print_box()">Print Maher's Resume</button>
     </div>
 
@@ -42,19 +42,24 @@
       >
 
       <div class="lists">
-        <h1>Education background:</h1>
-        <ul>
-          <li>I studied 7 years in Canada(until 2nd grade)</li>
-          <li>
-            I chose the new academic stream "Technological" for 11th grade and
-            Tawjihi
-          </li>
-          <li>I'm currently studying Computer Science at NNU</li>
-        </ul></div>
-
-    
+        <div id="education">
+          <h1>Education background:</h1>
+          <ul>
+            <li>I studied 7 years in Canada(until 2nd grade)</li>
+            <li>
+              I chose the new academic stream "Technological" for 11th grade and
+              Tawjihi
+            </li>
+            <li>I'm currently studying Computer Science at NNU</li>
+          </ul>
+        </div>
+        <div
+          onmouseover="turn_green()"
+          onmouseout="remove_green()"
+          class="work-experiences"
+        >
           <h1>Work experiences:</h1>
-              <div onmouseover="turn_green(this)" onmouseout="remove_green(this)" class="work-experiences">
+
           <ul>
             <li>I'm a previous fully experienced Swift iOS developer.</li>
             <li>I'm also a previuos experienced C# Game developer.</li>
@@ -96,18 +101,16 @@
       alert(
         "Welcome to Maher's site, please let me know if you have any questions"
       );
-
-
     }
 
-    function turn_green(x){
-    x.style.color = "green"
+    function turn_green() {
+      document.getElementById("education").style.color = "green";
     }
-    function remove_green(x){
-    x.style.color = "white"
+    function remove_green() {
+      document.getElementById("education").style.color = "white";
     }
 
-    function print_box(){
+    function print_box() {
       window.print();
     }
   </script>
