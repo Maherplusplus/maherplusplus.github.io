@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8" />
-
     <title>Maher</title>
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -17,6 +15,7 @@
       </h1>
 
       <button onclick="print_box()">Print Maher's Resume</button>
+      <a href="new.html" class="second-page">second page</a>
     </div>
 
     <div class="section2">
@@ -91,27 +90,27 @@
         </ul>
       </div>
     </div>
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+      function name_clicked() {
+        alert(
+          "Welcome to Maher's site, please let me know if you have any questions"
+        );
+      }
+
+      function turn_green() {
+        document.getElementById("education").style.color = "green";
+      }
+      function remove_green() {
+        document.getElementById("education").style.color = "white";
+      }
+
+      function print_box() {
+        window.print();
+      }
+    </script>
   </body>
-
-  <script src="particles.js"></script>
-  <script src="app.js"></script>
-
-  <script>
-    function name_clicked() {
-      alert(
-        "Welcome to Maher's site, please let me know if you have any questions"
-      );
-    }
-
-    function turn_green() {
-      document.getElementById("education").style.color = "green";
-    }
-    function remove_green() {
-      document.getElementById("education").style.color = "white";
-    }
-
-    function print_box() {
-      window.print();
-    }
-  </script>
 </html>
